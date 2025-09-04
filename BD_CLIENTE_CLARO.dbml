@@ -17,11 +17,11 @@ Table Plan {
 
 Table Contrato {
     id_contrato int [PK]
-    id_cliente int
+    id_cliente int [FK]
     id_plan int [FK]
     Fecha_inicio Date 
     Fecha_fin Date
-    Estado varchar
+    estado_contrato varchar
 }
 
 Table Factura {
@@ -30,7 +30,7 @@ Table Factura {
     Fecha_emision Date 
     Fecha_vencimiento Date
     Monto_total decimal(10,2)
-    Estado varchar
+    estado_factura varchar
 }
 
  
