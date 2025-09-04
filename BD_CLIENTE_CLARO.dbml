@@ -10,26 +10,26 @@ Table Cliente {
 Table Plan {
     id_plan int [PK]
     nombre_plan varchar
-    Tipo_plan varchar
-    Precio_mensual decimal(10,2)
-    Velocidad int
+    tipo_plan varchar
+    precio_mensual decimal(10,2)
+    velocidad int
 }
 
 Table Contrato {
     id_contrato int [PK]
     id_cliente int [FK]
     id_plan int [FK]
-    Fecha_inicio Date 
-    Fecha_fin Date
+    fecha_inicio Date 
+    fecha_fin Date
     estado_contrato varchar
 }
 
 Table Factura {
     id_factura int [PK]
     id_contrato int [FK]
-    Fecha_emision Date 
-    Fecha_vencimiento Date
-    Monto_total decimal(10,2)
+    fecha_emision Date 
+    fecha_vencimiento Date
+    monto_total decimal(10,2)
     estado_factura varchar
 }
 
@@ -37,9 +37,9 @@ Table Factura {
 Table Pago {
     id_pago int [PK]
     id_factura int [FK]
-    Fecha_pago Date 
-    Monto_pagado decimal(10,2)
-    Metodo_pago varchar
+    fecha_pago Date 
+    monto_pagado decimal(10,2)
+    metodo_pago varchar
 }
 
  REF: Cliente.id_cliente < Contrato.id_cliente
