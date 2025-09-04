@@ -1,6 +1,6 @@
 Table Cliente {
     id_cliente int [PK]
-    Nombre varchar
+    nombre_cliente varchar
     Apellido varchar
     Documento varchar [UNIQUE]
     Direccion varchar
@@ -9,7 +9,7 @@ Table Cliente {
 }
 Table Plan {
     id_plan int [PK]
-    Nombre_plan varchar
+    nombre_plan varchar
     Tipo_plan varchar
     Precio_mensual decimal(10,2)
     Velocidad int
